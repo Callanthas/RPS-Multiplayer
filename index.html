@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RPS Multiplayer Game </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <div class="container">
+
+    <header class="header">
+      <h1 class="display-3 text-center">Rock, Paper, Scissors</h1>
+    </header>
+
+    <div class="stage">
+
+      <div class="row justify-content-center">
+        <div class="col-6 join">
+          <form class="input-group" id="joinForm">
+            <input type="text" class="form-control" id="nameInput" placeholder="Your name">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" id="joinButton" type="submit">Join Game</button>
+            </span>
+          </form>
+        </div> <!-- join -->
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 text-center">
+          <h4 class="status"></h4>
+          <!-- Status message. -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="card player player1">
+            <h4 class="card-header bgp1">Waiting for Player 1</h4>
+            <div class="card-block">
+              <button type="button" class="rock btn btn-secondary btn-lg btn-block"  disabled>Rock</button>
+              <button type="button"  class="paper btn btn-secondary btn-lg btn-block"  disabled>Paper</button>
+              <button type="button"  class="scissors btn btn-secondary btn-lg btn-block" disabled>Scissors</button>
+              <p class="card-text"></p>
+            </div>
+            <div class="card-footer text-muted text-center" id="scorePlayer1">
+              <!-- Score -->
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card result">
+            <h4 class="card-header bg-warning text-white">Result</h4>
+            <div class="card-block">
+              <p class="card-text">
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card player player2">
+            <h4 class="card-header bgp2">Waiting for Player 2</h4>
+            <div class="card-block">
+              <button type="button"  class="rock btn btn-secondary btn-lg btn-block"  disabled>Rock</button>
+              <button type="button"  class="paper btn btn-secondary btn-lg btn-block"  disabled>Paper</button>
+              <button type="button"  class="scissors btn btn-secondary btn-lg btn-block" disabled>Scissors</button>
+              <p class="card-text"></p>
+            </div>
+            <div class="card-footer text-muted text-center" id="scorePlayer2">
+              <!-- Score -->
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-12 text-center">
+          <button class="btn btn-danger" id="clearButton">Reset Game</button>
+        </div> <!-- join -->
+      </div>
+    </div> <!-- stage -->
+
+    <div class="shoutbox">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">Chatbox</div>
+            <div class="card-block shouts"></div>
+            <div class="card-footer">
+              <form class="input-group" id="shoutForm">
+                <input type="text" id="shoutMessage" class="form-control" placeholder="Taunt your opponent here!">
+                <span class="input-group-btn">
+                  <button class="shoutButton btn btn-secondary" type="submit">Send!</button>
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- shoutbox -->
+
+    <footer class="footer">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p id="watchers"></p>
+        </div> <!-- join -->
+      </div>
+    </footer>
+
+  </div>
+
+</head>
+<body>
+
+<!-- jQuery / Google CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+<!-- Custom JS -->
+<script src="assets/javascript/app.js"></script>
+</body>
+</html>
