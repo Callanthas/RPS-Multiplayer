@@ -45,7 +45,7 @@
     .shoutbox .card-footer {
       background-color: #dbdbdb; }
   
-  .footer #clearButton {
+  #clearButton {
     display: none; }
     
   .player1 .btn-secondary.active {
